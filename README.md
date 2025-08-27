@@ -42,6 +42,9 @@ It covers **Task 1** (S3 Static Site) and **Task 2** (VPC Design, Route Tables, 
 
 ---
 
+
+
+
 ## 🔹 Task 1: S3 Static Website
 - **Bucket Name:** `cloudlaunch-site-bucket-brown`  
 - **Purpose:** Host a static landing page for CloudLaunch.  
@@ -62,6 +65,11 @@ It covers **Task 1** (S3 Static Site) and **Task 2** (VPC Design, Route Tables, 
 - **ARN:** arn:aws:cloudfront::311141558987:distribution/E1MCANY7YP9QJH
 - **Purpose:** Serve the static site globally with CDN acceleration.
 ---
+
+
+
+
+
 
 ## 🔹 Task 2: VPC, Subnets, Route Tables & Security Groups
 
@@ -92,7 +100,9 @@ It covers **Task 1** (S3 Static Site) and **Task 2** (VPC Design, Route Tables, 
 ### IAM User: `cloudlaunch-user`
 - **Purpose:** Read-only testing of VPC, subnets, and security groups.  
 - **Permissions:** JSON policy attached to allow only `Describe*` EC2/VPC actions (no create, modify, delete).  
-- **Policy Example:**
+- **Policy:**
+
+  
 
 ```json
 {
@@ -117,6 +127,8 @@ It covers **Task 1** (S3 Static Site) and **Task 2** (VPC Design, Route Tables, 
 }
 
 
+
+
 User Credentials:
 
 AWS Account ID / Alias: cloudlaunch-aws
@@ -131,11 +143,8 @@ Can list VPC resources ✅
 
 Cannot create, modify, or delete ❌
 
-📚 How to Test
 
-Open S3 static website endpoint → confirm landing page loads.
 
-Switch to cloudlaunch-user → confirm read-only access to VPC, subnets, and security groups.
 
 💡 Notes & Best Practices
 
@@ -146,6 +155,9 @@ Security groups follow least privilege principle.
 IAM user enforces role separation and safe testing.
 
 Bucket policy and S3 public access configured correctly to serve static content.
+
+
+
 
 ✅ Status
 
